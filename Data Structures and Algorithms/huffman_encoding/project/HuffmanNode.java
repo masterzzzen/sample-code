@@ -4,14 +4,13 @@ package project; //TODO: remove package declaration befor submission
  * <current date>
  */
 
-import ProblemSet3.programmingProblems.StringNode;
 
 /**
  * Created by Paul on 12/4/2015.
  */
 public class HuffmanNode {
 
-    // TODO: change access let to private; and create getters and setters
+
     int key;         // the key field
     int data;     // the rest of the data item
     HuffmanNode left;       // reference to the left child/subtree

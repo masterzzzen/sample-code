@@ -11,7 +11,7 @@
  * NOTE: You should not need to modify this file, although you are
  * welcome to do so.
  */
-package project; //TODO: remove package declaration befor submission
+package project;
 
 public class Code {
     private int bits;       // an int that stores the bits in the code

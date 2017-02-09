@@ -6,7 +6,7 @@
  * <Paul Zeng>, <paulmiaozeng@gmail.com>
  * <12/7/2015>
  */
-package project; //TODO: remove package declaration befor submission
+package project;
 import java.io.*;
 import java.util.*;
 

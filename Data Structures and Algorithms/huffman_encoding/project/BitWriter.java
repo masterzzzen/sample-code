@@ -5,7 +5,7 @@
  * 
  * NOTE: You should not have to modify this file.
  */
-package project; //TODO: remove package declaration befor submission
+package project;
 
 import java.io.*;
 
