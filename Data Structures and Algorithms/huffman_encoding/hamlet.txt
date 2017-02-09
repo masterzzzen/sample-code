@@ -1,0 +1,4 @@
+Introducing: Link Issues & Pull Requests
+Pull requests usually relate to at least one GitHub issue, so it makes sense you'd want to track them together as one unit through the development process.
+
+We've made it a lot easier to do just that. Using ZenHub, you can attach pull requests to their corresponding issue, then track them together on your advanced task boards.
