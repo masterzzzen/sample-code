@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+<div class="container">
+    <h1>User List </h1>
+    <input type="text" size="20" class="search-box" value="Filter">
+    <div>
+        <button class="prev-button btn btn-primary-transparent" style="display:none">Previous 10 users |</button>
+        <span class="user-count-display"></span>
+        <button class="next-button btn btn-primary-transparent" style="display:none">| Next 10 users</button>
+        <span id="big-add-user-button">
+        <button class="big-add-user-button btn btn-primary-transparent"><img src="icons/Plus.png"
+                                                                             style="width:24px;height:24px;">&nbsp Add Users</button> </span>
+    </div>
+
+    <table class="table">
+        <thead class="table-head">
+        <tr>
+            <th class="header" id="last-name-header">Last Name</th>
+            <th class="header" id="first-name-header">First Name</th>
+            <th class="header" id="age-header">Age</th>
+            <th class="header" id="email-header">Email</th>
+            <th class="header" id="created-on-header">Created on</th>
+            <th class="header" id="last-edited-header">Last edited</th>
+            <th class="header" id="active-header">Active</th>
+        </tr>
+        <tr class="new-user-input-container">
+            <td><input type="text" value="Enter a last name" class="user-input new-last-name-input"
+                       id="new-last-name-input"> </input></td>
+            <td><input type="text" value="Enter a first name" class="user-input new-first-name-input"
+                       id="new-first-name-input"> </input></td>
+            <td><input type="text" value="18" class="user-input new-age-input" id="new-age-input"> </input></td>
+            <td><input type="text" value="email@yourdomain.com" class="user-input new-email-input"
+                       id="new-email-input"> </input></td>
+            <td class="user-input new-created-on-input" id="new-created-on-input"></td>
+            <td class="user-input new-last-edited-input" id="new-last-edited-input"></td>
+        </tr>
+        </thead>
+        <tbody class="users-list">
+        </tbody>
+
+    </table>
+</div>
+
+<script type="text/template"
+        class="users-list-template">
+    <td><span class="last-name"><%= lastName %></span></td>
+    <td><span class="first-name"><%= firstName %></span></td>
+    <td><span class="age"><%= age %></span></td>
+    <td><span class="email"><%= email %></span></td>
+    <td class="created-on"><%= createdOnDate %></br><%= createdOnTimeOfDay %></td>
+    <td class="last-edited"><%= lastEditedDate %></br><%= lastEditedTimeOfDay %></td>
+
+    <td><span>
+        <% if (isActive){ %>
+            <img class='non-editing-active' src="icons/Checkmark-active.png" style="width:20px;height:20px;">
+        <%} else { %>
+            <img class='non-editing-active hide-active' src="icons/Checkmark-active.png" style="width:20px;height:20px;">
+        <%}%>
+        <img class='editing-active active' src="icons/Checkmark-active.png" style="display:none;width:20px;height:20px;">
+        <img class='editing-active inactive' src="icons/Checkmark-inactive.png" style="display:none;width:20px;height:20px;">
+        </span>
+        <img class="delete-user" src="icons/Trash.png" style="width:22px;height:18px;">
+        <img class="cancel-edit" src="icons/Cancel.png" style="display:none;width:24px;height:24px;">
+        <img class="edit-user" src="icons/Pencil.png" style="width:15px;height:15px;">
+        <img class="update-user" src="icons/Ok.png" style="display:none;width:22px;height:22px;">
+    </td>
+</script>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
