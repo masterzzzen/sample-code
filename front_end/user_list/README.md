@@ -30,11 +30,3 @@
 The project is written with both backbone and vanilla jquery because I was learning backbone and refreshing jquery so I wanted to practice both.   
 
 To run this code, unzip the folder and double click on index.html. Or you can run index.html from Pycharm or Webstorm.  The application is pre-populated with 25 randomly generated users each time the page loads.   
-
-The project should look like this on load:
-Inline image 1
-This is what a row looks like in edit mode:
-Inline image 2
-
-This is filter mode. Let's say we want all people named "Zach":
-Inline image 3
